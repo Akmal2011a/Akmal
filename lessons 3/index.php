@@ -1,11 +1,11 @@
- <?php
+<?php
+
 $a=[9,8,5,-5,0,4,3];
 
-$b=sort($a);
+$b=rsort($a);
 
 for($i=0; $i<count($a);$i++){
     echo $a [$i]."<br>";
-}                                           
+}
 
-
-?> 
+?>
