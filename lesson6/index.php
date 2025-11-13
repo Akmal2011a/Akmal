@@ -1,15 +1,28 @@
 <?php
 
-function salom ($ism){
-return "salom " . $ism;
+
+echo "1 dan 10 gacha bo'lgan tub sonlar: ";
+
+for ($i = 2; $i <=67; $i++) {
+    $tub = true;
+
+    for ($j = 2; $j <= sqrt($i); $j++) {
+        if ($i % $j == 0) {
+            $tub = false;
+            break;
+        }
+    }
+
+    if ($tub) {
+        echo $i . " ";
+    }
 }
-$ism="Akmal ";
-echo salom ($ism);
+?>
 
 
    
 
-?>
+
 
 
 
@@ -93,7 +106,7 @@ echo salom ($ism);
 <body><br><br><br><br><br><br><br><br><br><br>
 
     <hr>
-   <h1><?=$ism?></h1>
+   <h1><?=$i?></h1>
    <hr>
 </body>
 </html>
