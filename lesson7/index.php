@@ -1,26 +1,57 @@
 <?php
 
+ 
 
-echo "1 dan 10 gacha bo'lgan tub sonlar: ";
 
-for ($i = 2; $i <=60; $i++) {
-    $tub = true;
+$n=20;
 
-    for ($j = 2; $j <= sqrt($i); $j++) {
-        if ($i % $j == 0) {
-            $tub = false;
-            break;
-        }
+
+function va($num) {
+    if ($num<2)return false;
+    if ($num==2)return true;
+    if ($num%2==0)return false;
+
+    for ($i=3;$i*$i<=$num;$i+=2) {
+        if($num%$i==0)return false;
     }
+    return true;
+}
 
-    if ($tub) {
-        echo $i . " ";
+
+$count = 0;
+for ($i = 2; $i <= $n; $i++) {
+    if (va($i)) {
+        $count++;
     }
 }
+
+echo "$n jami tub sonlar: $count";
+
 ?>
 
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -106,7 +137,7 @@ for ($i = 2; $i <=60; $i++) {
 <body><br><br><br><br><br><br><br><br><br><br>
 
     <hr>
-   <h1><?=$i?></h1>
-   <hr>
+   <h1><?=$count?></h1> 
+   <!-- <hr>
 </body>
-</html>
+</html> 
